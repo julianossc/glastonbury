@@ -24,6 +24,7 @@ public class Order {
     private List<OrderItem> items;
 
     private String status;
+    private String failedReason;
 
     public Order() {
     }
@@ -76,4 +77,11 @@ public class Order {
         this.status = status;
     }
 
+    public void setFailedReason(String message) {
+        this.failedReason = message;
+    }
+
+    public String getFailedReason(){
+        return this.failedReason;
+    }
 }

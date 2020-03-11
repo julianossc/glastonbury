@@ -31,7 +31,7 @@ public class KafkaConfiguration {
     }
 
     @Bean
-    public NewTopic message() {
+    public NewTopic createOrders() {
         return new NewTopic("created-orders", 1, (short) 1);
     }
 
