@@ -1,19 +1,20 @@
 package br.com.zup.order.event;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Map;
+import java.util.List;
 
-public class OrderCreatedEvent {
+public class OrderCreatedEvent implements Serializable {
 
     private String orderId;
     private String customerId;
     private BigDecimal amount;
-    private Map<String,Integer> items;
+    private List<OrderItemEvent> items;
 
     public OrderCreatedEvent() {
     }
 
-    public OrderCreatedEvent(String orderId, String customerId, BigDecimal amount, Map<String,Integer> items) {
+    public OrderCreatedEvent(String orderId, String customerId, BigDecimal amount, List<OrderItemEvent> items) {
         this.orderId = orderId;
         this.customerId = customerId;
         this.amount = amount;
@@ -44,11 +45,11 @@ public class OrderCreatedEvent {
         this.amount = amount;
     }
 
-    public Map<String, Integer> getItems() {
+    public List<OrderItemEvent> getItems() {
         return items;
     }
 
-    public void setItems(Map<String, Integer> items) {
+    public void setItems(List<OrderItemEvent> items) {
         this.items = items;
     }
 }
