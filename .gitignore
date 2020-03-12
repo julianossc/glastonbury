@@ -12,6 +12,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+zk-single-kafka-single
 
 ### IntelliJ IDEA ###
 .idea
